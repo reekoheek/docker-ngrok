@@ -1,0 +1,31 @@
+{
+  "name": "docker-ngrok",
+  "version": "1.0.0",
+  "description": "Docker Ngrok Management",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --harmony-async-await ./index.js",
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ganesha <reekoheek@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-stage-3": "^6.17.0",
+    "bono": "xinix-technology/node-bono#master",
+    "co-body": "4.2.0",
+    "koa-static": "^3.0.0",
+    "node-norm": "xinix-technology/node-norm#master"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "eslint": "^3.13.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.2.0-rc.7",
+    "webpack-dev-server": "^2.2.0-rc.0"
+  }
+}
