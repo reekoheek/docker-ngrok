@@ -1,6 +1,6 @@
 const Bundle = require('bono/bundle');
-const jwt = require('koa-jwt');
 const parse = require('co-body');
+const jwt = require('jsonwebtoken');
 
 class AuthBundle extends Bundle {
   constructor ({ secret }) {

@@ -7,6 +7,8 @@
     "start": "nodemon --harmony-async-await ./index.js",
     "build": "webpack",
     "dev": "webpack-dev-server",
+    "docker:build": "docker build -t reekoheek/ngrok .",
+    "docker:up": "docker run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ganesha <reekoheek@gmail.com>",
@@ -14,8 +16,9 @@
   "dependencies": {
     "bono": "xinix-technology/node-bono#master",
     "co-body": "4.2.0",
+    "jsonwebtoken": "^7.2.1",
     "kcors": "^2.2.0",
-    "koa-jwt": "^1.2.0",
+    "koa-jwt": "^2.1.0",
     "koa-static": "^3.0.0",
     "node-fetch": "^1.6.3",
     "node-norm": "xinix-technology/node-norm#master"
