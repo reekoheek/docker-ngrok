@@ -1,0 +1,26 @@
+<div class="header-bar">
+  <div class="center">
+    <h1 class="title">Ngrok Management</h1>
+  </div>
+  <button class="btn pull-right icon icon-close" (tap)="logoutClicked(evt)"></button>
+</div>
+
+<div class="content">
+  <ul class="list">
+    <template is="xin-repeat" items="[[tunnels]]" as="tunnel">
+      <li class="padded-list">
+        <!-- <a href="#!/detail"> -->
+        <b>[[tunnel.name]]</b>
+        (
+        <span>[[tunnel.proto]]</span>
+        <span>[[tunnel.config.addr]]</span>
+        )
+        <!-- </a> -->
+        <a href="[[tunnel.public_url]]" style="user-select: initial" target="_blank">[[tunnel.public_url]]</a>
+      </li>
+    </template>
+  </ul>
+
+</div>
+
+<button class="floating-action padded-full icon icon-add active primary" (tap)="createButtonClicked(evt)"></button>

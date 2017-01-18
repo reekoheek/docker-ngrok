@@ -16,6 +16,7 @@ RUN set -x \
   && chmod go= /home/ngrok
 
 COPY . /app
+RUN npm install && npm build && rm -rf node_modules && npm install --production
 
 USER ngrok
 

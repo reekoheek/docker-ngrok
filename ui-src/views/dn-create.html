@@ -1,0 +1,44 @@
+<div class="header-bar">
+  <a class="btn pull-left icon icon-arrow-back" href="javascript:history.back()"></a>
+  <div class="center">
+    <h1 class="title">Create</h1>
+  </div>
+  <button class="btn pull-right icon icon-close" (tap)="logoutClicked(evt)"></button>
+</div>
+
+<div class="content padded-full">
+  <div class="input-wrapper input-filled">
+    <input class="with-label" type="text" id="input-name" value="{{form.name}}">
+    <label class="floating-label" for="input-name">Name</label>
+  </div>
+
+  <form id="protoGroup">
+    <ul class="list">
+      <li class="padded-for-list">
+        <label>Proto</label>
+      </li>
+      <li class="padded-for-list">
+        <label class="radio">
+          <input type="radio" name="proto" value="http">
+          HTTP
+          <span></span>
+        </label>
+      </li>
+      <li class="padded-for-list">
+        <label class="radio">
+          <input type="radio" name="proto" value="tcp">
+          TCP
+          <span></span>
+        </label>
+      </li>
+    </ul>
+  </form>
+
+  <div class="input-wrapper input-filled">
+    <input class="with-label" type="text" id="input-addr" value="{{form.addr}}">
+    <label class="floating-label" for="input-addr">Address</label>
+  </div>
+
+
+  <button class="btn fit-parent primary" (tap)="createButtonClicked(evt)">Submit</button>
+</div>

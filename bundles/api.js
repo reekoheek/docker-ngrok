@@ -1,18 +1,32 @@
 const Bundle = require('bono/bundle');
+const cors = require('kcors');
+const Ngrok = require('../services/ngrok');
+const jwt = require('koa-jwt');
 
 class APIBundle extends Bundle {
-  constructor () {
+  constructor ({ secret }) {
     super();
 
-    const ngrok = require('../services/ngrok').instance();
+    this.use(cors());
 
-    ngrok.start();
+    this.use(jwt({ secret }));
+
+    this.use(async (ctx, next) => {
+      if (await ngrok.dispatch(ctx)) {
+        return;
+      }
+
+      await next();
+    });
 
     this.use(async (ctx, next) => {
       ctx.ngrok = ngrok;
 
       await next();
     });
+
+    const ngrok = Ngrok.instance();
+    ngrok.start();
   }
 }
 

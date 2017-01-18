@@ -1,0 +1,12 @@
+<log-middleware></log-middleware>
+<jwt-middleware id="jwt" whitelist='["/login", "/test", "/foo"]' (signout)="signedOut(evt)"></jwt-middleware>
+<lazy-view-middleware></lazy-view-middleware>
+
+<div class="layout">
+  <xin-pager class="flex">
+    <dn-login lazy-view uri="/login"></dn-login>
+    <dn-list lazy-view uri="/"></dn-list>
+    <dn-create lazy-view uri="/create"></dn-create>
+    <xin-view lazy-view uri="/test">test</xin-view>
+  </xin-pager>
+</div>
