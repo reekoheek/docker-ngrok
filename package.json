@@ -38,7 +38,7 @@
     "nodemon": "^1.11.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.0-rc.7",
+    "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0-rc.0",
     "xin": "github:xinix-technology/xin#next"
   }

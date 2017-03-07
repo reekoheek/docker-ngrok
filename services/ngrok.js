@@ -40,11 +40,11 @@ class Ngrok {
         try {
           console.log('Creating default tunnels');
 
-          await this.create({
-            name: 'ssh',
-            proto: 'tcp',
-            addr: '22',
-          });
+          // await this.create({
+          //   name: 'ssh',
+          //   proto: 'tcp',
+          //   addr: '22',
+          // });
 
           await this.create({
             name: 'ngrok',
